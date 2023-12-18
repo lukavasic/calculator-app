@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Calculator App</title>
+  </head>
+
+  <body>
+    <main class="calculator">
+      <header class="header">
+        <h1>calc</h1>
+        <div class="theme">
+          <p>THEME</p>
+          <div class="theme__selector">
+            <div class="theme__labels">
+              <label for="theme1">1</label>
+              <label for="theme2">2</label>
+              <label for="theme3">3</label>
+            </div>
+            <div class="theme__inputs">
+              <input type="radio" id="theme1" name="theme" checked />
+              <input type="radio" id="theme2" name="theme" />
+              <input type="radio" id="theme3" name="theme" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="display">
+        <div data-previous-input class="previous__input">0</div>
+        <div data-current-input class="current__input">0</div>
+      </div>
+      <div class="keypad">
+        <button class="btn num">7</button>
+        <button class="btn num">8</button>
+        <button class="btn num">9</button>
+        <button class="btn delete">DEL</button>
+        <button class="btn num">4</button>
+        <button class="btn num">5</button>
+        <button class="btn num">6</button>
+        <button class="btn operator">+</button>
+        <button class="btn num">1</button>
+        <button class="btn num">2</button>
+        <button class="btn num">3</button>
+        <button class="btn operator">-</button>
+        <button class="btn num">.</button>
+        <button class="btn num">0</button>
+        <button class="btn operator">/</button>
+        <button class="btn operator">x</button>
+        <button class="btn grid-double-columns reset">RESET</button>
+        <button class="btn grid-double-columns equals">=</button>
+      </div>
+    </main>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/themeToggler.js"></script>
+  </body>
+</html>

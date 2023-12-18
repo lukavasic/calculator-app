@@ -1,0 +1,231 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* VARIABLES and THEMES*/
+
+@import url("https://fonts.google.com/specimen/League+Spartan");
+
+:root {
+  --ff-primary: "League Spartan", sans-serif;
+
+  --fs-primary: 32px;
+
+  --clr-bg: hsl(222, 26%, 31%);
+  --clr-keypad-bg: hsl(223, 31%, 20%);
+  --clr-diplsay-bg: hsl(224, 36%, 15%);
+
+  --clr-key-action-bg: hsl(225, 21%, 49%);
+  --clr-key-action-shadow: hsl(224, 28%, 35%);
+
+  --clr-key-output-bg: hsl(6, 63%, 50%);
+  --clr-key-output-shadow: hsl(6, 70%, 34%);
+
+  --clr-key-primary-bg: hsl(30, 25%, 89%);
+  --clr-key-primary-shadow: hsl(28, 16%, 65%);
+
+  --clr-text-gray: hsl(221, 14%, 31%);
+  --clr-text-white: hsl(0, 0%, 100%);
+}
+
+.theme2 {
+  --ff-primary: "League Spartan", sans-serif;
+
+  --fs-primary: 32px;
+
+  --clr-bg: hsl(0, 0%, 90%);
+  --clr-keypad-bg: hsl(0, 5%, 81%);
+  --clr-diplsay-bg: hsl(0, 0%, 93%);
+
+  --clr-key-action-bg: hsl(185, 42%, 37%);
+  --clr-key-action-shadow: hsl(185, 58%, 25%);
+
+  --clr-key-output-bg: hsl(25, 98%, 40%);
+  --clr-key-output-shadow: hsl(25, 99%, 27%);
+
+  --clr-key-primary-bg: hsl(45, 7%, 89%);
+  --clr-key-primary-shadow: hsl(35, 11%, 61%);
+
+  --clr-text-gray: hsl(60, 10%, 19%);
+  --clr-text-white: hsl(60, 10%, 19%);
+}
+
+.theme3 {
+  --ff-primary: "League Spartan", sans-serif;
+
+  --fs-primary: 32px;
+
+  --clr-bg: hsl(268, 75%, 9%);
+  --clr-keypad-bg: hsl(268, 71%, 12%);
+  --clr-diplsay-bg: hsl(268, 71%, 12%);
+
+  --clr-key-action-bg: hsl(281, 89%, 26%);
+  --clr-key-action-shadow: hsl(285, 91%, 52%);
+
+  --clr-key-output-bg: hsl(176, 100%, 44%);
+  --clr-key-output-shadow: hsl(177, 92%, 70%);
+
+  --clr-key-primary-bg: hsl(268, 47%, 21%);
+  --clr-key-primary-shadow: hsl(290, 70%, 36%);
+
+  --clr-text-gray: hsl(52, 100%, 62%);
+  --clr-text-white: hsl(0, 0%, 100%);
+}
+
+/* General Styling */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-bg);
+  flex-direction: column;
+
+  font-size: var(--fs-primary);
+  font-family: var(--ff-primary);
+  font-weight: 700;
+}
+
+h1 {
+  color: var(--clr-text-white);
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.theme p {
+  font-size: 1rem;
+  color: var(--clr-text-white);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.theme__labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-text-white);
+}
+
+.theme__inputs {
+  background-color: var(--clr-keypad-bg);
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+}
+
+.theme__inputs input {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 3rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.theme__inputs input:checked {
+  background-color: var(--clr-key-output-bg);
+}
+
+/* Display */
+
+.display {
+  background-color: var(--clr-diplsay-bg);
+  color: var(--clr-text-white);
+
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  text-align: right;
+  height: 100px;
+}
+
+.previous__input {
+  font-size: 1.8rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Keypad */
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--clr-keypad-bg);
+  border-radius: 0.5rem;
+}
+
+.grid-double-columns {
+  grid-column: span 2;
+}
+
+/* Keypad Buttons */
+
+.btn {
+  color: var(--clr-text-gray);
+  background-color: var(--clr-key-primary-bg);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.3rem;
+
+  box-shadow: 0 5px var(--clr-key-primary-shadow);
+  cursor: pointer;
+}
+
+.btn.delete,
+.btn.reset {
+  background-color: var(--clr-key-action-bg);
+  color: var(--clr-text-white);
+
+  box-shadow: 0 5px var(--clr-key-action-shadow);
+}
+
+.btn.equals {
+  background-color: var(--clr-key-output-bg);
+  color: var(--clr-text-white);
+
+  box-shadow: 0 5px var(--clr-key-output-shadow);
+}
+
+.btn:hover {
+  filter: brightness(130%);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
